@@ -1,135 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>P. Ramesh Babu | Programmer | CBIT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>P. Ramesh Babu | Programmer | CBIT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #1d2671, #c33764);
-      color: #333;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+  }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
+  /* Layout */
+  .main {
+    display: flex;
+    min-height: 100vh;
+  }
 
-    header {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+  /* Left Panel */
+  .sidebar {
+    width: 260px;
+    background: #1d2671;
+    color: #fff;
+    padding: 20px;
+  }
 
-    header h1 {
-      margin: 0;
-      color: #1d2671;
-    }
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
-    header h3 {
-      margin-top: 10px;
-      color: #c33764;
-      font-weight: normal;
-    }
+  .menu a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+  }
 
-    section {
-      background: white;
-      margin-top: 25px;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
+  .menu a:hover,
+  .menu a.active {
+    background: #c33764;
+  }
 
-    section h2 {
-      color: #1d2671;
-      border-bottom: 3px solid #c33764;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+  /* Right Panel */
+  .content {
+    flex: 1;
+    padding: 30px;
+  }
 
-    ul {
-      line-height: 1.8;
-    }
+  .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
 
-    footer {
-      text-align: center;
-      margin: 30px 0;
-      color: #fff;
-      font-size: 14px;
-    }
+  h1, h2 {
+    color: #1d2671;
+  }
 
-    .highlight {
-      color: #c33764;
-      font-weight: bold;
-    }
+  h2 {
+    border-bottom: 3px solid #c33764;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
 
-    @media (max-width: 600px) {
-      header, section {
-        padding: 20px;
-      }
+  ul {
+    line-height: 1.8;
+  }
+
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column;
     }
-  </style>
+    .sidebar {
+      width: 100%;
+    }
+  }
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <header>
+<div class="main">
+
+  <!-- LEFT PANEL -->
+  <div class="sidebar">
+    <h2>My Page</h2>
+    <div class="menu">
+      <a class="active" onclick="showSection('home')">Personal Info</a>
+      <a onclick="showSection('materials')">Materials</a>
+      <a onclick="showSection('support')">Technical Support</a>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="content">
+
+    <!-- HOME -->
+    <div id="home" class="card section">
       <h1>P. Ramesh Babu</h1>
       <h3>Programmer | Department of CSE</h3>
-      <p class="highlight">Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad</p>
-    </header>
+      <p><strong>Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad</strong></p>
 
-    <section>
       <h2>About Me</h2>
       <p>
         I am <strong>P. Ramesh Babu</strong>, currently working as a
         <strong>Programmer</strong> in the <strong>Department of Computer Science and Engineering</strong>
         at <strong>CBIT, Hyderabad</strong>.
-        I am involved in supporting academic computing, System and application management,
+        I am involved in supporting academic computing, system and application management,
         and technical assistance for faculty and students.
       </p>
-    </section>
 
-    <section>
       <h2>Professional Responsibilities</h2>
       <ul>
         <li>Technical support for academic labs</li>
-        <li>Assisting faculty and students in computing needs</li>
+        <li>Assisting faculty and students</li>
         <li>System and application management</li>
       </ul>
-    </section>
 
-    <section>
       <h2>Skills</h2>
       <ul>
-        <li>Programming and problem solving through C/C++/Python/Java</li>
-        <li>Database Management Systemst</li>
+        <li>C / C++ / Python / Java</li>
+        <li>DBMS</li>
         <li>Web Technologies</li>
-        <li>Simulation of Computer Netoworks using Cisco Packet Tracer / GNS</li>
-        <li>Administration of Moodle Based Learning Management System</li>
+        <li>Computer Networks Simulation</li>
+        <li>Moodle LMS Administration</li>
       </ul>
-    </section>
 
-    <section>
       <h2>Contact</h2>
       <p>
         📍 Hyderabad, India<br>
-        📧 Email: <em>prameshbabu_prog@cbit.ac.in</em>
+        📧 prameshbabu_prog@cbit.ac.in
       </p>
-    </section>
+    </div>
+
+    <!-- MATERIALS -->
+    <div id="materials" class="card section" style="display:none;">
+      <h2>Materials</h2>
+      <ul>
+        <li><a href="#" target="_blank">C Programming Notes</a></li>
+        <li><a href="#" target="_blank">Python Lab Manual</a></li>
+        <li><a href="#" target="_blank">DBMS PPTs</a></li>
+        <li><a href="#" target="_blank">Computer Networks Resources</a></li>
+      </ul>
+    </div>
+
+    <!-- TECHNICAL SUPPORT -->
+    <div id="support" class="card section" style="display:none;">
+      <h2>Technical Support</h2>
+      <ul>
+        <li>Lab Software Installation</li>
+        <li>Moodle LMS Support</li>
+        <li>Network & System Troubleshooting</li>
+        <li>Faculty & Student Technical Assistance</li>
+      </ul>
+    </div>
 
     <footer>
       © 2025 P. Ramesh Babu | Department of CSE, CBIT
     </footer>
 
   </div>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => {
+      sec.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.classList.remove('active');
+    });
+    event.target.classList.add('active');
+  }
+</script>
+
 </body>
 </html>
-
