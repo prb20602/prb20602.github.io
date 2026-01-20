@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI & ML Python Installation Procedure</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 30px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.08);
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 12px;
+            border-left: 4px solid #3498db;
+            overflow-x: auto;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Procedure to Install Python Environment for AI & ML</h1>
+
+<section>
+    <h2>Procedure (Linux Steps)</h2>
+
+    <h3>Step 1: Check Existing Python Installation</h3>
+    <pre>python3 --version</pre>
+    <p>If Python is not installed:</p>
+    <pre>
+sudo apt update
+sudo apt install python3
+    </pre>
+
+    <h3>Step 2: Install pip (Python Package Manager)</h3>
+    <pre>pip3 --version</pre>
+    <p>If not installed:</p>
+    <pre>sudo apt install python3-pip</pre>
+
+    <h3>Step 3: Upgrade pip</h3>
+    <pre>pip3 install --upgrade pip</pre>
+
+    <h3>Step 4: (Optional) Create Virtual Environment</h3>
+    <pre>
+sudo apt install python3-venv
+python3 -m venv ai_ml_env
+source ai_ml_env/bin/activate
+    </pre>
+
+    <h3>Step 5: Install Required AI & ML Libraries</h3>
+    <pre>
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install scikit-learn
+pip install tensorflow
+pip install keras
+    </pre>
+
+    <h3>Step 6: Verify Installation</h3>
+    <pre>
+python3
+import numpy
+import pandas
+import matplotlib
+import sklearn
+import tensorflow
+import keras
+print("All libraries imported successfully")
+    </pre>
+
+    <h3>Sample Output</h3>
+    <pre>All libraries imported successfully</pre>
+</section>
+
+<section>
+    <h2>Procedure (Windows Steps)</h2>
+
+    <h3>Step 1: Download and Install Python</h3>
+    <ul>
+        <li>Open a web browser and visit https://www.python.org</li>
+        <li>Download Python 3.x (64-bit) for Windows</li>
+        <li>Run the installer</li>
+        <li>✔ Check <strong>Add Python to PATH</strong></li>
+        <li>Click <strong>Install Now</strong></li>
+    </ul>
+
+    <h3>Step 2: Verify Python Installation</h3>
+    <pre>
+python --version
+Expected Output:
+Python 3.x.x
+    </pre>
+
+    <h3>Step 3: Verify pip Installation</h3>
+    <pre>
+pip --version
+python -m ensurepip --upgrade
+    </pre>
+
+    <h3>Step 4: Upgrade pip</h3>
+    <pre>python -m pip install --upgrade pip</pre>
+
+    <h3>Step 5: (Optional) Create Virtual Environment</h3>
+    <pre>
+python -m venv ai_ml_env
+ai_ml_env\Scripts\activate
+    </pre>
+
+    <h3>Step 6: Install Required AI & ML Libraries</h3>
+    <pre>
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install scikit-learn
+pip install tensorflow
+pip install keras
+    </pre>
+
+    <h3>Step 7: Verify Installation</h3>
+    <pre>
+python
+import numpy
+import pandas
+import matplotlib
+import sklearn
+import tensorflow
+import keras
+print("Libraries imported successfully")
+    </pre>
+
+    <h3>Step 8: Install Jupyter Notebook (Optional)</h3>
+    <pre>
+pip install notebook
+jupyter notebook
+    </pre>
+
+    <h3>Sample Output</h3>
+    <pre>Libraries imported successfully</pre>
+</section>
+
+<section>
+    <h2>Result</h2>
+    <p>
+        Thus, the Python environment required for Artificial Intelligence and Machine Learning
+        was successfully installed on Windows OS, and all essential Python libraries were
+        imported without errors.
+    </p>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>
+        Windows provides a convenient platform for AI & ML development. By installing Python
+        and the required libraries, a complete development environment for machine learning
+        applications is achieved.
+    </p>
+</section>
+
+<section>
+    <h2>Viva Questions (Optional)</h2>
+    <ol>
+        <li>Why is Python used for AI and ML?</li>
+        <li>What is pip?</li>
+        <li>Difference between TensorFlow and Keras?</li>
+        <li>What is virtual environment?</li>
+        <li>What is the use of Scikit-Learn?</li>
+    </ol>
+</section>
+
+</body>
+</html>
